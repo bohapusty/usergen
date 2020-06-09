@@ -43,7 +43,7 @@ def generateFromTxtFile():
                 newFile.write(f"{lines.split(':')[0]}:{lines.split(':')[1][0].lower()}{lines.split(':')[2][0].lower()}{lines.split(':')[3].lower()}:{lines.split(':')[1]}:{lines.split(':')[2]}:{lines.split(':')[3]} \n")
             else:
                 newFile.write(f"{lines.split(':')[0]}:{lines.split(':')[1][0].lower()}{lines.split(':')[3].lower()}:{lines.split(':')[1].lower()}:{lines.split(':')[2]}:{lines.split(':')[3]} \n")
-        #close connection for .txt files
+        #close connection for .txt filess
         f.close()
 
 
