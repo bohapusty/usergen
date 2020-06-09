@@ -28,11 +28,9 @@ def generateFromArgs():
             f = open('%s' %(i),'r')
             for lines in f:
                 if(len(lines.split(':')[2]) > 0):
-                    print("%s" %(lines.split(':')[0]), "%s" %(lines.split(':')[1]), "%s" %(lines.split(':')[2]), "%s" %(lines.split(':')[3]), "%s" %(lines.split(':')[4]))
-                    newFile.write("%s:%s%s%s:%s:%s:%s \n" %(lines.split(':')[0], lines.split(':')[1][0].lower(), lines.split(':')[2][0].lower(), lines.split(':')[3].lower(), lines.split(':')[1], lines.split(':')[2], lines.split(':')[3]))
+                    newFile.write(f"{lines.split(':')[0]}:{lines.split(':')[1][0].lower()}{lines.split(':')[2][0].lower()}{lines.split(':')[3].lower()}:{lines.split(':')[1]}:{lines.split(':')[2]}:{lines.split(':')[3]} \n")
                 else:
-                    print("%s" %(lines.split(':')[0]), "%s" %(lines.split(':')[1]), "%s" %(lines.split(':')[2]), "%s" %(lines.split(':')[3]))
-                    newFile.write("%s:%s%s:%s:%s:%s \n" %(lines.split(':')[0], lines.split(':')[1][0].lower(), lines.split(':')[3].lower(), lines.split(':')[1], lines.split(':')[2], lines.split(':')[3]))
+                    newFile.write(f"{lines.split(':')[0]}:{lines.split(':')[1][0].lower()}{lines.split(':')[3].lower()}:{lines.split(':')[1].lower()}:{lines.split(':')[2]}:{lines.split(':')[3]} \n")
             #close connection for .txt files
             f.close()
 
@@ -42,13 +40,12 @@ def generateFromTxtFile():
         f = open('%s' %(files),'r')
         for lines in f:
             if(len(lines.split(':')[2]) > 0):
-                print("%s" %(lines.split(':')[0]), "%s" %(lines.split(':')[1]), "%s" %(lines.split(':')[2]), "%s" %(lines.split(':')[3]), "%s" %(lines.split(':')[4]))
-                newFile.write("%s:%s%s%s:%s:%s:%s \n" %(lines.split(':')[0], lines.split(':')[1][0].lower(), lines.split(':')[2][0].lower(), lines.split(':')[3].lower(), lines.split(':')[1], lines.split(':')[2], lines.split(':')[3]))
+                newFile.write(f"{lines.split(':')[0]}:{lines.split(':')[1][0].lower()}{lines.split(':')[2][0].lower()}{lines.split(':')[3].lower()}:{lines.split(':')[1]}:{lines.split(':')[2]}:{lines.split(':')[3]} \n")
             else:
-                print("%s" %(lines.split(':')[0]), "%s" %(lines.split(':')[1]), "%s" %(lines.split(':')[2]), "%s" %(lines.split(':')[3]))
-                newFile.write("%s:%s%s:%s:%s:%s \n" %(lines.split(':')[0], lines.split(':')[1][0].lower(), lines.split(':')[3].lower(), lines.split(':')[1], lines.split(':')[2], lines.split(':')[3]))
+                newFile.write(f"{lines.split(':')[0]}:{lines.split(':')[1][0].lower()}{lines.split(':')[3].lower()}:{lines.split(':')[1].lower()}:{lines.split(':')[2]}:{lines.split(':')[3]} \n")
         #close connection for .txt files
         f.close()
+
 
 if len(sys.argv) == 1:
     generateFromTxtFile()
