@@ -1,0 +1,5 @@
+1234:jmhurban:Jozef:Miloslav:Hurban 
+4567:mrstefanik:Milan:Rastislav:Stefanik 
+4563:jmurgas:Jozef::Murgas 
+1111:phufnagel:Pista::Hufnagel 
+4563:phufnagel:Pista::Hufnagel 
